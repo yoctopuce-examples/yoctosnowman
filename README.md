@@ -1,5 +1,5 @@
-Yoctopuce Snowman Chrismas ornement
-===================================
+Yoctopuce Snowman Christmas decorations
+=======================================
 
 The holiday season is starting presently and it is more than time to take out Christmas decorations. While rummaging in the attic,  we happened on an old ornament in the shape of a snowman. We thought that there had to be a way to make this basic ornament into something much more interesting. And what if YOU could control our Christmas ornament with a Tweet?  Let's see how to put this idea into practice…
 
