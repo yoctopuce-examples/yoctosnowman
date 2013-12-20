@@ -213,6 +213,7 @@ try {
 		$getfield = '?q=#yoctosnowman';
 		$requestMethod = 'GET';
 		$twitter = new TwitterAPIExchange($settings);
+		$json = $twitter->setGetfield($getfield)
 		        ->buildOauth($url, $requestMethod)
 		        ->performRequest();
 		$result = json_decode($json);
@@ -235,11 +236,11 @@ try {
 		        }
 		    }
 		    if (sizeof($colors)>0){
-				$top_led->set_rgbColor($colors[0]);
+				$top_led->rgbMove($colors[0], 1000);
 				if (sizeof($colors)>1){
-					$bottom_led->set_rgbColor($colors[1]);
+					$bottom_led->rgbMove($colors[1], 1000);
 				} else {
-					$bottom_led->set_rgbColor($colors[0]);			
+					$bottom_led->rgbMove($colors[0], 1000);			
 				}
 				break;
 		    }
@@ -247,8 +248,8 @@ try {
 
 
 	} else {
-		$top_led->set_rgbColor(0);
-		$bottom_led->set_rgbColor(0);
+		$top_led->rgbMove(0, 1000);
+		$bottom_led->rgbMove(0, 1000);
 	}
 } catch (Exception $e) {
     echo 'Exception reçue : ',  $e->getMessage(), "\n";
